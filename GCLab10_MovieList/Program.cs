@@ -21,8 +21,24 @@ namespace GCLab10_MovieList
             do
             {
                 Console.WriteLine("What category are you interested in?");
-                Console.WriteLine("1: animated \n2: drama \n3: horror \n4: scifi");          
-                Int32.TryParse(Console.ReadLine(), out movieCategory);
+                Console.WriteLine("1: animated \n2: drama \n3: horror \n4: scifi");
+
+                try
+                {
+                    movieCategory = int.Parse(Console.ReadLine());
+                    if (movieCategory < 1 || movieCategory > 4)
+                    {
+                        throw new IndexOutOfRangeException();
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please enter 1, 2, 3, or 4.");
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    Console.WriteLine("Please enter 1, 2, 3, or 4.");
+                }
                 switch (movieCategory)
                 {
                     case 1:
@@ -37,8 +53,7 @@ namespace GCLab10_MovieList
                     case 4:
                         input = "scifi";
                         break;
-                    default:
-                        Console.WriteLine("That was not valid input!");
+                    default:                     
                         break;
                 }
             } while (movieCategory < 1 || movieCategory > 4);
