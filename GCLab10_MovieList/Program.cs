@@ -10,10 +10,14 @@ namespace GCLab10_MovieList
     {
         static void Main(string[] args)
         {
-            //Fill the empty list with movies from the MovieList function.
-
-            List<Movie> movies = MovieList();
-            IEnumerable<Movie> query = movies.OrderBy(movie => movie.Title);
+            //Fill the empty list with movies from the GetMovieList function.
+            
+            Movie screen = new Movie();
+            List<Movie> movies = screen.GetMovieList(); 
+            
+            //sort the movies alphabetically by title
+                     
+            IEnumerable<Movie> sortedMovies = movies.OrderBy(movie => movie.Title);
             int movieCategory = 0;
             string input = "";
             Console.WriteLine("Welcome to the Movie List Application!");
@@ -22,7 +26,6 @@ namespace GCLab10_MovieList
             {
                 Console.WriteLine("What category are you interested in?");
                 Console.WriteLine("1: animated \n2: drama \n3: horror \n4: scifi");
-
                 try
                 {
                     movieCategory = int.Parse(Console.ReadLine());
@@ -59,7 +62,7 @@ namespace GCLab10_MovieList
             } while (movieCategory < 1 || movieCategory > 4);
 
             {
-                foreach (Movie m in query)
+                foreach (Movie m in sortedMovies)
                 {
                     if (m.Category.Equals(input))
                     {
@@ -68,33 +71,6 @@ namespace GCLab10_MovieList
                 }
             }
             Console.ReadLine();        
-        }
-
-        public static List<Movie> MovieList()
-        {
-            List<Movie> movieList = new List<Movie>();
-            Movie show = new Movie("Up", "animated");
-            movieList.Add(show);
-            show = new Movie("The King's Speech", "drama");
-            movieList.Add(show);
-            show = new Movie("Scream", "horror");
-            movieList.Add(show);
-            show = new Movie("Star Wars", "scifi");
-            movieList.Add(show);
-            show = new Movie("Bambi", "animated");
-            movieList.Add(show);
-            show = new Movie("The English Patient", "drama");
-            movieList.Add(show);
-            show = new Movie("Friday the 13th", "horror");
-            movieList.Add(show);
-            show = new Movie("Star Trek", "scifi");
-            movieList.Add(show);
-            show = new Movie("The Lion King", "animated");
-            movieList.Add(show);
-            show = new Movie("Halloween", "horror");
-            movieList.Add(show);
-
-            return movieList;
-        }
+        }      
     }
 }
