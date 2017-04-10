@@ -1,0 +1,6 @@
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLab10_MovieList\GCLab10_MovieList\bin\Debug\GCLab10_MovieList.exe.config
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLab10_MovieList\GCLab10_MovieList\bin\Debug\GCLab10_MovieList.exe
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLab10_MovieList\GCLab10_MovieList\bin\Debug\GCLab10_MovieList.pdb
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLab10_MovieList\GCLab10_MovieList\obj\Debug\GCLab10_MovieList.csprojResolveAssemblyReference.cache
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLab10_MovieList\GCLab10_MovieList\obj\Debug\GCLab10_MovieList.exe
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GCLab10_MovieList\GCLab10_MovieList\obj\Debug\GCLab10_MovieList.pdb
